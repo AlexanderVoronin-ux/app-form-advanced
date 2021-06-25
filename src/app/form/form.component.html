@@ -1,0 +1,52 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+  <div class="mb-3">
+    <label for="name">Имя:</label>
+    <input id="name" type="text" class="form-control"
+    formControlName="name">
+  </div>
+
+  <div class="mb-3">
+    <label for="password">Возраст:</label>
+    <input id="password" type="password" class="form-control"
+           formControlName="password">
+  </div>
+
+  <div class="mb-3">
+    <button class="btn btn-info" [disabled]="userForm.invalid">Сохранить</button>
+  </div>
+</form>
+
+
+<!--<form #userForm="ngForm" (ngSubmit)="onSubmit()">-->
+
+<!--  <div class="mb-3">-->
+<!--    <label for="name">Имя:</label>-->
+<!--    <input id="name" type="text" class="form-control" name="name" [(ngModel)]="model.name"-->
+<!--           required-->
+<!--           minlength="4"-->
+<!--           maxlength="12">-->
+<!--    <div class="alert alert-danger" *ngIf="formErrors.name">{{formErrors.name}}-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="mb-3">-->
+<!--    <label for="age">Возраст:</label>-->
+<!--    <input id="age" type="number" class="form-control" name="age" [(ngModel)]="model.age" required>-->
+<!--    <div class="alert alert-danger" *ngIf="formErrors.age">{{formErrors.age}}</div>-->
+<!--  </div>-->
+
+<!--  <div class="mb-3">-->
+<!--    <label for="">Роль:</label>-->
+<!--    <select id="" name="role" class="form-select" [ngModel]="model.role" required>-->
+<!--      <option value="">Выберите роль</option>-->
+<!--      <option *ngFor="let role of roles" [value]="role">{{role}}</option>-->
+<!--    </select>-->
+<!--  </div>-->
+
+<!--  <div class="mb-3">-->
+<!--    <button class="btn btn-info" [disabled]="userForm.form.invalid">Сохранить</button>-->
+<!--  </div>-->
+<!--</form>-->
+
+
