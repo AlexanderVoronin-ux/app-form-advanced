@@ -1,8 +1,10 @@
 export class User {
   constructor(
-    public id: number | null,
-    public name: string | null,
-    public role: string | null,
-    public age?: number | null
+    public id: number,
+    public name: string,
+    public password: string,
+    public email: string,
+    public age: number,
+    public role: string
   ) { }
 }
